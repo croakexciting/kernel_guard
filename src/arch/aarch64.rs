@@ -1,3 +1,4 @@
+/* 
 use core::arch::asm;
 
 #[inline]
@@ -12,3 +13,12 @@ pub fn local_irq_save_and_disable() -> usize {
 pub fn local_irq_restore(flags: usize) {
     unsafe { asm!("msr daif, {}", in(reg) flags) };
 }
+*/
+
+#[inline]
+pub fn local_irq_save_and_disable() -> usize {
+    0
+}
+
+#[inline]
+pub fn local_irq_restore(flags: usize) {}
